@@ -4,8 +4,8 @@ import { AgentIcon, AgentIconType } from '../../../shared/icons/AgentIcon'
 import { ChatHistoryActionItem } from '../../../shared/types/ChatHistoryItem'
 import { useAgent } from '../../agent/TldrawAgentAppProvider'
 import { ChatHistoryGroup } from './ChatHistoryGroup'
-import { getActionInfo } from './getActionInfo'
 import { TldrawDiffViewer } from './TldrawDiffViewer'
+import { getActionInfo } from './getActionInfo'
 
 export function ChatHistoryGroupWithDiff({ group }: { group: ChatHistoryGroup }) {
 	const agent = useAgent()

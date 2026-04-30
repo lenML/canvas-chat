@@ -4,6 +4,7 @@ import {
 	ErrorBoundary,
 	TLComponents,
 	Tldraw,
+	TldrawOverlays,
 	TldrawUiToastsProvider,
 	TLUiOverrides,
 } from 'tldraw'
@@ -68,13 +69,17 @@ function App() {
 						<CustomHelperButtons />
 					</TldrawAgentAppContextProvider>
 				),
-			OnTheCanvas: () =>
-				app ? (
-					<TldrawAgentAppContextProvider app={app}>
-						<AgentViewportBoundsHighlights />
-						<AllContextHighlights />
-					</TldrawAgentAppContextProvider>
-				) : null,
+			Overlays: () => (
+				<>
+					<TldrawOverlays />
+					{app && (
+						<TldrawAgentAppContextProvider app={app}>
+							<AgentViewportBoundsHighlights />
+							<AllContextHighlights />
+						</TldrawAgentAppContextProvider>
+					)}
+				</>
+			),
 		}
 	}, [app])
 

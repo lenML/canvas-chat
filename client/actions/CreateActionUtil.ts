@@ -211,7 +211,7 @@ const SHAPE_DEFAULTS: ShapeDefaultsMap = {
 			size: 's',
 			align: 'middle',
 			font: 'draw',
-			fontSizeAdjustment: 1,
+			fontSizeAdjustment: 0,
 			growY: 0,
 			labelColor: 'black',
 			scale: 1,
