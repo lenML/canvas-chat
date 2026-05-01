@@ -19,16 +19,13 @@ importers:
         version: 2.0.104(zod@4.4.1)
       '@cloudflare/vite-plugin':
         specifier: ^1.13.2
-        version: 1.34.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0))(workerd@1.20260426.1)(wrangler@4.86.0(@cloudflare/workers-types@4.20260430.1))
+        version: 1.34.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0))(workerd@1.20260426.1)(wrangler@4.86.0(@cloudflare/workers-types@4.20260430.1))
       '@google/generative-ai':
         specifier: ^0.24.1
         version: 0.24.1
       '@tldraw/tlschema':
         specifier: ^4.5.10
         version: 4.5.10(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-      '@types/node':
-        specifier: ^25.6.0
-        version: 25.6.0
       '@worker-tools/json-stream':
         specifier: ^0.1.0-pre.12
         version: 0.1.0-pre.12
@@ -53,6 +50,9 @@ importers:
       tldraw:
         specifier: ^4.5.10
         version: 4.5.10(@floating-ui/dom@1.7.6)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      tsx:
+        specifier: ^4.21.0
+        version: 4.21.0
       wrangler:
         specifier: ^4.67.0
         version: 4.86.0(@cloudflare/workers-types@4.20260430.1)
@@ -63,6 +63,9 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20250913.0
         version: 4.20260430.1
+      '@types/node':
+        specifier: ^25.6.0
+        version: 25.6.0
       '@types/react':
         specifier: ^19.2.7
         version: 19.2.14
@@ -71,13 +74,13 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       '@vitejs/plugin-react-swc':
         specifier: ^3.10.2
-        version: 3.11.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0))
+        version: 3.11.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0))
       typescript:
         specifier: ^5.8.3
         version: 5.9.3
       vite:
         specifier: ^7.0.1
-        version: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)
+        version: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0)
 
 packages:
 
@@ -1797,6 +1800,9 @@ packages:
     resolution: {integrity: sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==}
     engines: {node: '>=6'}
 
+  get-tsconfig@4.14.0:
+    resolution: {integrity: sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==}
+
   hast-util-to-jsx-runtime@2.3.6:
     resolution: {integrity: sha512-zl6s8LwNyo1P9uw+XJGvZtdFF1GdAkOg8ujOw+4Pyb76874fLps4ueHXDhXWdk6YHQ6OgUtinliG7RsYvCbbBg==}
 
@@ -2174,6 +2180,9 @@ packages:
   remark-rehype@11.1.2:
     resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
 
+  resolve-pkg-maps@1.0.0:
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
+
   rollup@4.60.2:
     resolution: {integrity: sha512-J9qZyW++QK/09NyN/zeO0dG/1GdGfyp9lV8ajHnRVLfo/uFsbji5mHnDgn/qYdUHyCkM2N+8VyspgZclfAh0eQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -2236,6 +2245,11 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  tsx@4.21.0:
+    resolution: {integrity: sha512-5C1sg4USs1lfG0GFb2RLXsdpXqBSEhAaA/0kPL01wxzpMqLILNxIxIOKiILz+cdg/pLnOUxFYOR5yhHU666wbw==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
 
   typed-array-utils@0.3.0-pre.0:
     resolution: {integrity: sha512-hzkk8/bpvqCayQnQAno11R8qOWHrkTHR9k+JYVEBpHAQMF2YfPqBMKKkSmeSw2Qd4ri+QugFmj7ca4ckSr4Z4Q==}
@@ -2435,12 +2449,12 @@ snapshots:
     optionalDependencies:
       workerd: 1.20260426.1
 
-  '@cloudflare/vite-plugin@1.34.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0))(workerd@1.20260426.1)(wrangler@4.86.0(@cloudflare/workers-types@4.20260430.1))':
+  '@cloudflare/vite-plugin@1.34.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0))(workerd@1.20260426.1)(wrangler@4.86.0(@cloudflare/workers-types@4.20260430.1))':
     dependencies:
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260426.1)
       miniflare: 4.20260426.0
       unenv: 2.0.0-rc.24
-      vite: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)
+      vite: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0)
       wrangler: 4.86.0(@cloudflare/workers-types@4.20260430.1)
       ws: 8.18.0
     transitivePeerDependencies:
@@ -3866,11 +3880,11 @@ snapshots:
 
   '@vercel/oidc@3.1.0': {}
 
-  '@vitejs/plugin-react-swc@3.11.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0))':
+  '@vitejs/plugin-react-swc@3.11.0(vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@swc/core': 1.15.32
-      vite: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)
+      vite: 7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -3993,6 +4007,10 @@ snapshots:
     optional: true
 
   get-nonce@1.0.1: {}
+
+  get-tsconfig@4.14.0:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
 
   hast-util-to-jsx-runtime@2.3.6:
     dependencies:
@@ -4588,6 +4606,8 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
+  resolve-pkg-maps@1.0.0: {}
+
   rollup@4.60.2:
     dependencies:
       '@types/estree': 1.0.8
@@ -4713,6 +4733,13 @@ snapshots:
 
   tslib@2.8.1: {}
 
+  tsx@4.21.0:
+    dependencies:
+      esbuild: 0.27.3
+      get-tsconfig: 4.14.0
+    optionalDependencies:
+      fsevents: 2.3.3
+
   typed-array-utils@0.3.0-pre.0: {}
 
   typescript@5.9.3: {}
@@ -4787,7 +4814,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0):
+  vite@7.3.2(@types/node@25.6.0)(lightningcss@1.32.0)(tsx@4.21.0):
     dependencies:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.4)
@@ -4799,6 +4826,7 @@ snapshots:
       '@types/node': 25.6.0
       fsevents: 2.3.3
       lightningcss: 1.32.0
+      tsx: 4.21.0
 
   w3c-keyname@2.2.8: {}
 

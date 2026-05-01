@@ -1,5 +1,5 @@
-import { UnknownAction } from '../../shared/schema/AgentActionSchemas'
-import { AgentActionUtil, registerActionUtil } from './AgentActionUtil'
+import { UnknownAction } from "@shared/schema/AgentActionSchemas";
+import { AgentActionUtil, registerActionUtil } from "./AgentActionUtil";
 
 /**
  * This event util is used when the event type is unknown.
@@ -7,12 +7,12 @@ import { AgentActionUtil, registerActionUtil } from './AgentActionUtil'
  * Sometimes it happens because the model makes a mistake.
  */
 export const UnknownActionUtil = registerActionUtil(
-	class UnknownActionUtil extends AgentActionUtil<UnknownAction> {
-		static override type = 'unknown' as const
+  class UnknownActionUtil extends AgentActionUtil<UnknownAction> {
+    static override type = "unknown" as const;
 
-		override getInfo() {
-			// Don't show anything in the UI for unknown actions
-			return null
-		}
-	}
-)
+    override getInfo() {
+      // Don't show anything in the UI for unknown actions
+      return null;
+    }
+  }
+);

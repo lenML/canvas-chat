@@ -27,7 +27,11 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "useDefineForClassFields": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "paths": {
+      "@/*": ["./client/*"],
+      "@shared/*": ["./shared/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["client", "shared"],

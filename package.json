@@ -23,12 +23,13 @@
     "react-dom": "^19.2.1",
     "react-markdown": "^10.1.0",
     "tldraw": "^4.5.10",
+    "tsx": "^4.21.0",
     "wrangler": "^4.67.0",
     "zod": "^4.1.8"
   },
   "devDependencies": {
-    "@types/node": "^25.6.0",
     "@cloudflare/workers-types": "^4.20250913.0",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^3.10.2",
